@@ -1,6 +1,5 @@
 import * as dotenv from 'dotenv';
 
-dotenv.config();
 // diretorio do arquivo env
 const path = `${__dirname}/../../../.env`;
 
