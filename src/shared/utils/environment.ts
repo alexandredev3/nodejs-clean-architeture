@@ -12,4 +12,3 @@ export const { TYPEORM_PORT } = process.env;
 export const { TYPEORM_USERNAME } = process.env;
 export const { TYPEORM_PASSWORD } = process.env;
 export const { TYPEORM_DATABASE } = process.env;
-
