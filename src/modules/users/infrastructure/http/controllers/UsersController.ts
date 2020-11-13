@@ -13,6 +13,7 @@ class UsersController {
       bio
     } = request.body;
 
+    // agora vamos ter acesso aos metodos no createUser.
     const createUser = container.resolve(CreateUserService);
     
     const user = await createUser.execute({ name, email, password, bio });

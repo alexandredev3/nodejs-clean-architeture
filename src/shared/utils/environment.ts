@@ -5,10 +5,18 @@ const path = `${__dirname}/../../../.env`;
 
 dotenv.config({ path });
 
-// Database Connection Environment.
-export const { TYPEORM_TYPE } = process.env;
-export const { TYPEORM_HOST } = process.env;
-export const { TYPEORM_PORT } = process.env;
-export const { TYPEORM_USERNAME } = process.env;
-export const { TYPEORM_PASSWORD } = process.env;
-export const { TYPEORM_DATABASE } = process.env;
+// Json Web Token Enviroment;
+export const {
+  SECRET,
+  EXPIRES_IN
+} = process.env;
+
+// Database Connection Environment;
+export const { 
+  TYPEORM_TYPE,
+  TYPEORM_HOST,
+  TYPEORM_PORT,
+  TYPEORM_USERNAME,
+  TYPEORM_PASSWORD,
+  TYPEORM_DATABASE
+} = process.env;
