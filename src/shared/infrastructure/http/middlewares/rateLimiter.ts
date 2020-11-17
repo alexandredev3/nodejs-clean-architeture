@@ -2,6 +2,8 @@ import { Request, Response, NextFunction } from 'express';
 import { createClient } from 'redis';
 import { RateLimiterRedis } from 'rate-limiter-flexible';
 
+import AppError from '@shared/errors/AppError';
+
 import {
   REDIS_HOST,
   REDIS_PORT,
@@ -29,16 +31,14 @@ async function rateLimiter(
   request: Request,
   response: Response,
   next: NextFunction
-) {
+): Promise<void> {
   try {
     // salvando o ip do consumidor da minha API.
     await limiter.consume(request.ip);
 
     return next();
   } catch(error) {
-    return response.status(429).json({
-      error: 'Too many request'
-    })
+    throw new AppError('Too many request', 429);
   }
 }
 

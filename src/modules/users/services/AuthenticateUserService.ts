@@ -6,6 +6,8 @@ import User from '@modules/users/infrastructure/typeorm/entities/User';
 import IUsersRepository from '@modules/users/repositories/ICreateUsersRepository';
 import IHashProvider from '@modules/users/providers/HashProvider/models/IHashProvider';
 
+import AppError from '@shared/errors/AppError';
+
 interface IRequest {
   email: string;
   password: string;
@@ -39,11 +41,11 @@ class AuthenticateUserService {
     const user = await this.usersRepository.findByEmail(email);
 
     if (!user) {
-      throw new Error('User does not exists');
+      throw new AppError('User does not exists', 400);
     }
 
     if (!(await this.hashProvider.compareHash(password, user.encrypted_password))) {
-      throw new Error('Incorrect Password/email validate');
+      throw new AppError('Incorrect Password/email validate', 401);
     }
 
     const token = sign({}, authConfig.secret, {

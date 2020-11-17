@@ -7,6 +7,8 @@ import ICacheProvider from '@shared/container/providers/CacheProvider/models/ICa
 
 import User from '@modules/users/infrastructure/typeorm/entities/User';
 
+import AppError from '@shared/errors/AppError';
+
 interface IRequest {
   name: string;
   email: string;
@@ -47,7 +49,7 @@ class CreateUserService {
 
   public async execute({ name, email, password, bio }: IRequest): Promise<User> {
     if (await this.usersRepository.findByEmail(email)) {
-      throw new Error('Email address already used.');
+      throw new AppError('Email address already used.', 401);
     }
 
     const hash_password = await this.hashProvider.generateHash(password);
