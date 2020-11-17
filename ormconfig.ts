@@ -14,6 +14,7 @@ module.exports = {
   username: TYPEORM_USERNAME,
   password: TYPEORM_PASSWORD,
   database: TYPEORM_DATABASE,
+  logging: true,
   migrations: ["./src/shared/infrastructure/typeorm/migrations/*.ts"],
   entities: ["./src/modules/**/infrastructure/typeorm/entities/*.ts"],
   cli: {

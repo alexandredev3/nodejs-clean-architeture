@@ -6,6 +6,8 @@ import sessionsRouter from '@modules/users/infrastructure/http/routes/sessions.r
 const routes = Router();
 
 routes.post('/users', usersRouter);
+routes.get('/users', usersRouter);
+
 routes.post('/session', sessionsRouter);
 
 export default routes;

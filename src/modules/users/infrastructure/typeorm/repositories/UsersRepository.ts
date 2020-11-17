@@ -38,6 +38,14 @@ class UsersRepository implements ICreateUsersRepository {
 
     return user;
   }
+
+  public async findAll(): Promise<User[] | undefined> {
+    const users = await this.ormRepository.find({
+      select: ['id', 'name', 'bio']
+    });
+
+    return users;
+  }
 }
 
 export default UsersRepository;

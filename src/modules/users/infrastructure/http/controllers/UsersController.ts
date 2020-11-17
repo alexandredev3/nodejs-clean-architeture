@@ -3,6 +3,7 @@ import { container } from 'tsyringe';
 import { classToClass } from 'class-transformer';
 
 import CreateUserService from '@modules/users/services/CreateUserService';
+import ListAllUsersService from '@modules/users/services/ListAllUsersService';
 
 class UsersController {
   public async create(request: Request, response: Response): Promise<Response> {
@@ -25,6 +26,16 @@ class UsersController {
      * E essa estancia vai ser retornada na resposta.
      */
     return response.status(200).json(classToClass(user));
+  }
+
+  public async index(request: Request, response: Response): Promise<Response> {
+    const listAllUsers = container.resolve(ListAllUsersService);
+
+    const users = await listAllUsers.execute();
+
+    return response.status(200).json(
+      users
+    );
   }
 }
 

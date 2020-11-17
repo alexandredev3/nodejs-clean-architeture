@@ -10,6 +10,7 @@
   "devDependencies": {
     "@types/bcryptjs": "^2.4.2",
     "@types/express": "^4.17.8",
+    "@types/ioredis": "^4.17.8",
     "@types/jsonwebtoken": "^8.5.0",
     "ts-node-dev": "^1.0.0",
     "tsconfig-paths": "^3.9.0",
@@ -20,6 +21,7 @@
     "class-transformer": "^0.3.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "ioredis": "^4.19.2",
     "jsonwebtoken": "^8.5.1",
     "ora": "^5.1.0",
     "pg": "^8.4.2",

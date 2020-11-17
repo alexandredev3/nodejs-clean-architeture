@@ -6,4 +6,5 @@ export default interface ICreateUsersRepository {
   save(user: User): Promise<User>;
   findById(id: string): Promise<User | undefined>;
   findByEmail(email: string): Promise<User | undefined>;
+  findAll(): Promise<User[] | undefined>;
 }
