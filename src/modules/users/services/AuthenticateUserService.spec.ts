@@ -59,4 +59,19 @@ describe('Authenticate User', () => {
     ).rejects.toBeInstanceOf(AppError);
   });
 
+  it('should not authenticate a user with an invalid password', async () => {
+    await createUserService.execute({
+      name: 'Alexandre',
+      email: 'alexandre@example.com',
+      password: 'password',
+      bio: 'bio example'
+    });
+
+    await expect(
+      authenticateUserService.execute({
+        email: 'alexandre@example.com',
+        password: 'invalid password'
+      })
+    ).rejects.toBeInstanceOf(AppError);
+  });
 });
