@@ -51,12 +51,12 @@ describe('Authenticate User', () => {
   });
 
   it('should not authenticate a user with an email that does not exist', async () => {
-    const authenticateResponse = await authenticateUserService.execute({
-      email: 'mateus@mateus.com',
-      password: 'password'
-    });
-
-    expect(authenticateResponse).rejects.toBeInstanceOf(AppError);
-  })
+    await expect(
+      authenticateUserService.execute({
+        email: 'mateus@mateus.com',
+        password: 'password'
+      })
+    ).rejects.toBeInstanceOf(AppError);
+  });
 
 });
