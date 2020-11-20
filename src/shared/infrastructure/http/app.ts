@@ -1,3 +1,4 @@
+import 'reflect-metadata';
 import 'express-async-errors';
 
 import express, { Request, Response, NextFunction } from 'express';
@@ -21,7 +22,7 @@ app.use(routes);
 
 app.use(
   (errors: Error, request: Request, response: Response, _: NextFunction) => {
-    // se for um erro do client, vai cair nesse if.
+    // se for um erro do client;
     if (errors instanceof AppError) {
       /**
        * Estou verificando se o error retorna true. 
@@ -33,6 +34,7 @@ app.use(
       });
     }
 
+    // Se for um erro de Validação;
     if (isCelebrateError(errors)) {
       let validateErrors: ValidationError = {};
       
@@ -47,7 +49,7 @@ app.use(
         errors: validateErrors
       });
     }
-    // caso seja um erro do servidor, vai rodar esse codigo.
+    // Caso seja um erro do servidor;
 
     // para o desenvolvedor;
     console.log(errors);
