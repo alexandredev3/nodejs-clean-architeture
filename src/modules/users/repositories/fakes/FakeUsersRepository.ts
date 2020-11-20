@@ -17,7 +17,7 @@ class FakeUsersRepository implements ICreateUsersRepository {
     const user = new User();
 
     // colocando todas as propriedades, id, name, email, etc... para dentro do objeto user;
-    Object.assign(user, { id: uuid, name, email, encrypted_password, bio });
+    Object.assign(user, { id: uuid(), name, email, encrypted_password, bio });
 
     this.users.push(user);
 
