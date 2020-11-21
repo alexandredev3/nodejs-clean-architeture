@@ -30,19 +30,19 @@ API de Autenticação com infraestrutura de software, seguindo o conceito SOLID 
 ## 🛠 Tecnologias
 Este projeto foi desenvolvido com as seguintes tecnologias
 ### App
-  - [Typescript](https://pt-br.reactjs.org/)
-  - [Node.js](https://www.typescriptlang.org/)
-  - [Tsyringe](https://styled-components.com/)
-  - [Express](https://styled-components.com/)
-  - [Celebrate](https://styled-components.com/)
+  - [Typescript](https://www.typescriptlang.org/)
+  - [Node.js](https://nodejs.org/)
+  - [Tsyringe](https://github.com/microsoft/tsyringe)
+  - [Express](https://expressjs.com/pt-br/)
+  - [Celebrate](https://github.com/arb/celebrate)
  
 ### Banco de Dados
-  - [Typeorm](https://styled-components.com/)
-  - [Postgres](https://styled-components.com/)
-  - [Redis](https://styled-components.com/)
+  - [Typeorm](https://typeorm.io/#/)
+  - [Postgres](https://www.postgresql.org/)
+  - [Redis](https://redis.io/)
   
 ### Testes
-  - [Jest](https://styled-components.com/)
+  - [Jest](https://jestjs.io/)
   
 ## :clipboard: Funcionalidades
   - [x] Criar usuários.
