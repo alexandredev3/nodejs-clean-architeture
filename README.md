@@ -25,7 +25,7 @@
 <img src="./.github/assets/coverage.png" />
 
 ## :page_facing_up: Descrição
-API de Autenticação de usuário com arquitetura de software, seguindo os conceitos do SOLID e o Design Pattern de Dependency Injection em Node.js e Typescript.
+API de Autenticação de usuário com arquitetura em camadas, seguindo os conceitos do SOLID e o Design Pattern de Dependency Injection em Node.js e Typescript.
 
 ## 🛠 Tecnologias
 Este projeto foi desenvolvido com as seguintes tecnologias
