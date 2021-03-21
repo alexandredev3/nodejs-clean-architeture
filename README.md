@@ -61,10 +61,10 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 #### Iniciando Back-End
   ```bash
   # Clone este repositório;
-  $ git clone https://github.com/alexandredev3/nodejs-api-solid-principles.git
+  $ git clone https://github.com/alexandredev3/nodejs-clean-architeture.git
 
   # Vá para a pasta onde esta o app;
-  $ cd nodejs-api-solid-principles
+  $ cd nodejs-clean-architeture
 
   # Instale as dependências;
   $ yarn ou npm install
