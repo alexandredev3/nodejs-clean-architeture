@@ -22,8 +22,6 @@
   <a href="#man-Autor">Autor</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
 
-<img src="./.github/assets/coverage.png" />
-
 ## :page_facing_up: Descrição
 API de Autenticação de usuário com arquitetura em camadas, seguindo os conceitos do SOLID e o Design Pattern de Dependency Injection em Node.js e Typescript.
 
@@ -80,7 +78,12 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
   # Executando os testes com o Jest;
   $ yarn test ou npm run tests
   ```
-  
+## Clean Architecture
+<img src="./.github/assets/clean-architecture-image.jpg" />
+
+## Estrutura de Pastas
+<img src="./.github/assets/tree-image.svg" />
+
 ## :man: Autor
 
 <a href="https://github.com/alexandredev3/">
